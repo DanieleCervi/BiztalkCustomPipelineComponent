@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>Biztalk Custom Pipeline Component</Name>
+    <Description>Base class to implement a custom Biztalk Server Pipeline Component. 
+                 Includes a wizard which allows to define name, description and properties of the component.</Description>
+    <Icon>BiztalkCustomPipelineComponent.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>1f0c7810-43ea-446f-84fd-8a0ef83d249e</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>BiztalkCustomPipelineComponent</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <CreateInPlace>true</CreateInPlace>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true">CustomComponent.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>BiztalkCustomPipelineComponentWizard, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=284da1de3f31699a</Assembly>
+    <FullClassName>BiztalkCustomPipelineComponentWizard.WizardImplementation</FullClassName>
+  </WizardExtension>
+</VSTemplate>
